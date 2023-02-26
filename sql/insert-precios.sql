@@ -1,3 +1,5 @@
+USE [WTPV_CALEIA_TEST];
+GO
 SET IDENTITY_INSERT [dbo].[TP_PRECIOS] ON
 GO
 INSERT INTO [dbo].[TP_PRECIOS]
@@ -994,7 +996,11 @@ VALUES
 (N'0001', N'GENE', CAST(320300007 AS Numeric(9, 0)), CAST(85.0000 AS Numeric(18, 4)), CAST(100.00 AS Numeric(7, 2)), CAST(0.0000 AS Numeric(18, 4)), CAST(N'2020-03-09T13:36:14.893' AS DateTime), N'sa', CAST(99786 AS Numeric(18, 0))),
 (N'0001', N'GENE', CAST(320400001 AS Numeric(9, 0)), CAST(79.0000 AS Numeric(18, 4)), CAST(100.00 AS Numeric(7, 2)), CAST(0.0000 AS Numeric(18, 4)), CAST(N'2020-03-09T13:37:48.563' AS DateTime), N'sa', CAST(100908 AS Numeric(18, 0))),
 (N'0001', N'GENE', CAST(320400002 AS Numeric(9, 0)), CAST(75.0000 AS Numeric(18, 4)), CAST(100.00 AS Numeric(7, 2)), CAST(0.0000 AS Numeric(18, 4)), CAST(N'2020-03-09T13:37:47.800' AS DateTime), N'sa', CAST(100710 AS Numeric(18, 0))),
-(N'0001', N'GENE', CAST(320400003 AS Numeric(9, 0)), CAST(85.0000 AS Numeric(18, 4)), CAST(100.00 AS Numeric(7, 2)), CAST(0.0000 AS Numeric(18, 4)), CAST(N'2020-03-09T13:37:47.533' AS DateTime), N'sa', CAST(100512 AS Numeric(18, 0))),
+(N'0001', N'GENE', CAST(320400003 AS Numeric(9, 0)), CAST(85.0000 AS Numeric(18, 4)), CAST(100.00 AS Numeric(7, 2)), CAST(0.0000 AS Numeric(18, 4)), CAST(N'2020-03-09T13:37:47.533' AS DateTime), N'sa', CAST(100512 AS Numeric(18, 0)))
+GO
+INSERT INTO [dbo].[TP_PRECIOS]
+([Cajtpv], [Tipotarifa], [Articulo], [Precio], [Porcentaje_Combinado], [Precio_Combinado], [Fecha_Modificado], [Usuario], [Codigoid])
+VALUES
 (N'0001', N'GENE', CAST(320400004 AS Numeric(9, 0)), CAST(50.0000 AS Numeric(18, 4)), CAST(100.00 AS Numeric(7, 2)), CAST(0.0000 AS Numeric(18, 4)), CAST(N'2020-03-09T13:37:48.080' AS DateTime), N'sa', CAST(100842 AS Numeric(18, 0))),
 (N'0001', N'GENE', CAST(320400005 AS Numeric(9, 0)), CAST(75.0000 AS Numeric(18, 4)), CAST(100.00 AS Numeric(7, 2)), CAST(0.0000 AS Numeric(18, 4)), CAST(N'2020-03-09T13:37:47.877' AS DateTime), N'sa', CAST(100776 AS Numeric(18, 0))),
 (N'0001', N'GENE', CAST(320400006 AS Numeric(9, 0)), CAST(65.0000 AS Numeric(18, 4)), CAST(100.00 AS Numeric(7, 2)), CAST(0.0000 AS Numeric(18, 4)), CAST(N'2020-03-09T13:37:47.610' AS DateTime), N'sa', CAST(100578 AS Numeric(18, 0))),
@@ -1991,7 +1997,11 @@ VALUES
 (N'0001', N'HAHO', CAST(21300021 AS Numeric(9, 0)), CAST(10.0000 AS Numeric(18, 4)), CAST(100.00 AS Numeric(7, 2)), CAST(0.0000 AS Numeric(18, 4)), CAST(N'2022-06-03T15:51:42.620' AS DateTime), N'AS400', CAST(162602 AS Numeric(18, 0))),
 (N'0001', N'HAHO', CAST(21600001 AS Numeric(9, 0)), CAST(14.0000 AS Numeric(18, 4)), CAST(100.00 AS Numeric(7, 2)), CAST(0.0000 AS Numeric(18, 4)), CAST(N'2022-04-08T11:25:24.500' AS DateTime), N'AS400', CAST(130803 AS Numeric(18, 0))),
 (N'0001', N'HAHO', CAST(21600002 AS Numeric(9, 0)), CAST(10.0000 AS Numeric(18, 4)), CAST(100.00 AS Numeric(7, 2)), CAST(0.0000 AS Numeric(18, 4)), CAST(N'2020-03-13T11:13:38.020' AS DateTime), N'sa', CAST(130869 AS Numeric(18, 0))),
-(N'0001', N'HAHO', CAST(21600003 AS Numeric(9, 0)), CAST(10.0000 AS Numeric(18, 4)), CAST(100.00 AS Numeric(7, 2)), CAST(0.0000 AS Numeric(18, 4)), CAST(N'2020-03-13T11:13:38.760' AS DateTime), N'sa', CAST(130935 AS Numeric(18, 0))),
+(N'0001', N'HAHO', CAST(21600003 AS Numeric(9, 0)), CAST(10.0000 AS Numeric(18, 4)), CAST(100.00 AS Numeric(7, 2)), CAST(0.0000 AS Numeric(18, 4)), CAST(N'2020-03-13T11:13:38.760' AS DateTime), N'sa', CAST(130935 AS Numeric(18, 0)))
+GO
+INSERT INTO [dbo].[TP_PRECIOS]
+([Cajtpv], [Tipotarifa], [Articulo], [Precio], [Porcentaje_Combinado], [Precio_Combinado], [Fecha_Modificado], [Usuario], [Codigoid])
+VALUES
 (N'0001', N'HAHO', CAST(21600004 AS Numeric(9, 0)), CAST(10.0000 AS Numeric(18, 4)), CAST(100.00 AS Numeric(7, 2)), CAST(0.0000 AS Numeric(18, 4)), CAST(N'2022-04-08T11:25:24.987' AS DateTime), N'AS400', CAST(155540 AS Numeric(18, 0))),
 (N'0001', N'HAHO', CAST(21600005 AS Numeric(9, 0)), CAST(10.0000 AS Numeric(18, 4)), CAST(100.00 AS Numeric(7, 2)), CAST(0.0000 AS Numeric(18, 4)), CAST(N'2022-04-08T11:25:25.453' AS DateTime), N'AS400', CAST(155606 AS Numeric(18, 0))),
 (N'0001', N'HAHO', CAST(21600006 AS Numeric(9, 0)), CAST(10.0000 AS Numeric(18, 4)), CAST(100.00 AS Numeric(7, 2)), CAST(0.0000 AS Numeric(18, 4)), CAST(N'2022-04-08T11:25:25.907' AS DateTime), N'AS400', CAST(155672 AS Numeric(18, 0))),
@@ -2988,7 +2998,11 @@ VALUES
 (N'0001', N'MYP+', CAST(20100054 AS Numeric(9, 0)), CAST(7.5000 AS Numeric(18, 4)), CAST(100.00 AS Numeric(7, 2)), CAST(0.0000 AS Numeric(18, 4)), CAST(N'2020-03-09T10:17:51.583' AS DateTime), N'sa', CAST(92461 AS Numeric(18, 0))),
 (N'0001', N'MYP+', CAST(20100057 AS Numeric(9, 0)), CAST(4.5000 AS Numeric(18, 4)), CAST(100.00 AS Numeric(7, 2)), CAST(0.0000 AS Numeric(18, 4)), CAST(N'2020-09-18T15:34:45.803' AS DateTime), N'sa', CAST(143334 AS Numeric(18, 0))),
 (N'0001', N'MYP+', CAST(20100058 AS Numeric(9, 0)), CAST(4.5000 AS Numeric(18, 4)), CAST(100.00 AS Numeric(7, 2)), CAST(0.0000 AS Numeric(18, 4)), CAST(N'2020-09-18T15:34:46.580' AS DateTime), N'sa', CAST(143400 AS Numeric(18, 0))),
-(N'0001', N'MYP+', CAST(20100060 AS Numeric(9, 0)), CAST(1.5000 AS Numeric(18, 4)), CAST(100.00 AS Numeric(7, 2)), CAST(0.0000 AS Numeric(18, 4)), CAST(N'2020-03-11T11:19:43.440' AS DateTime), N'sa', CAST(118333 AS Numeric(18, 0))),
+(N'0001', N'MYP+', CAST(20100060 AS Numeric(9, 0)), CAST(1.5000 AS Numeric(18, 4)), CAST(100.00 AS Numeric(7, 2)), CAST(0.0000 AS Numeric(18, 4)), CAST(N'2020-03-11T11:19:43.440' AS DateTime), N'sa', CAST(118333 AS Numeric(18, 0)))
+GO
+INSERT INTO [dbo].[TP_PRECIOS]
+([Cajtpv], [Tipotarifa], [Articulo], [Precio], [Porcentaje_Combinado], [Precio_Combinado], [Fecha_Modificado], [Usuario], [Codigoid])
+VALUES
 (N'0001', N'MYP+', CAST(20100062 AS Numeric(9, 0)), CAST(4.5000 AS Numeric(18, 4)), CAST(100.00 AS Numeric(7, 2)), CAST(0.0000 AS Numeric(18, 4)), CAST(N'2020-09-18T15:34:47.353' AS DateTime), N'sa', CAST(143466 AS Numeric(18, 0))),
 (N'0001', N'MYP+', CAST(20100072 AS Numeric(9, 0)), CAST(11.5000 AS Numeric(18, 4)), CAST(100.00 AS Numeric(7, 2)), CAST(0.0000 AS Numeric(18, 4)), CAST(N'2022-03-07T12:30:37.200' AS DateTime), N'AS400', CAST(154026 AS Numeric(18, 0))),
 (N'0001', N'MYP+', CAST(20100073 AS Numeric(9, 0)), CAST(7.5000 AS Numeric(18, 4)), CAST(100.00 AS Numeric(7, 2)), CAST(0.0000 AS Numeric(18, 4)), CAST(N'2022-03-07T12:30:39.317' AS DateTime), N'AS400', CAST(154092 AS Numeric(18, 0))),
@@ -3985,7 +3999,11 @@ VALUES
 (N'0001', N'REFI', CAST(10200081 AS Numeric(9, 0)), CAST(3.2500 AS Numeric(18, 4)), CAST(100.00 AS Numeric(7, 2)), CAST(0.0000 AS Numeric(18, 4)), CAST(N'2020-03-11T06:54:07.923' AS DateTime), N'sa', CAST(89884 AS Numeric(18, 0))),
 (N'0001', N'REFI', CAST(10200086 AS Numeric(9, 0)), CAST(2.5000 AS Numeric(18, 4)), CAST(100.00 AS Numeric(7, 2)), CAST(0.0000 AS Numeric(18, 4)), CAST(N'2020-03-11T12:53:46.717' AS DateTime), N'sa', CAST(120046 AS Numeric(18, 0))),
 (N'0001', N'REFI', CAST(10300001 AS Numeric(9, 0)), CAST(2.6000 AS Numeric(18, 4)), CAST(100.00 AS Numeric(7, 2)), CAST(0.0000 AS Numeric(18, 4)), CAST(N'2020-08-18T13:12:37.220' AS DateTime), N'MASTER', CAST(139635 AS Numeric(18, 0))),
-(N'0001', N'REFI', CAST(10300003 AS Numeric(9, 0)), CAST(4.5000 AS Numeric(18, 4)), CAST(100.00 AS Numeric(7, 2)), CAST(0.0000 AS Numeric(18, 4)), CAST(N'2020-03-11T06:47:27.683' AS DateTime), N'sa', CAST(88234 AS Numeric(18, 0))),
+(N'0001', N'REFI', CAST(10300003 AS Numeric(9, 0)), CAST(4.5000 AS Numeric(18, 4)), CAST(100.00 AS Numeric(7, 2)), CAST(0.0000 AS Numeric(18, 4)), CAST(N'2020-03-11T06:47:27.683' AS DateTime), N'sa', CAST(88234 AS Numeric(18, 0)))
+GO
+INSERT INTO [dbo].[TP_PRECIOS]
+([Cajtpv], [Tipotarifa], [Articulo], [Precio], [Porcentaje_Combinado], [Precio_Combinado], [Fecha_Modificado], [Usuario], [Codigoid])
+VALUES
 (N'0001', N'REFI', CAST(10300004 AS Numeric(9, 0)), CAST(2.6000 AS Numeric(18, 4)), CAST(100.00 AS Numeric(7, 2)), CAST(0.0000 AS Numeric(18, 4)), CAST(N'2020-03-11T06:47:27.697' AS DateTime), N'sa', CAST(87574 AS Numeric(18, 0))),
 (N'0001', N'REFI', CAST(10300007 AS Numeric(9, 0)), CAST(2.8000 AS Numeric(18, 4)), CAST(100.00 AS Numeric(7, 2)), CAST(0.0000 AS Numeric(18, 4)), CAST(N'2020-03-11T13:03:05.550' AS DateTime), N'sa', CAST(121234 AS Numeric(18, 0))),
 (N'0001', N'REFI', CAST(10300008 AS Numeric(9, 0)), CAST(2.7000 AS Numeric(18, 4)), CAST(100.00 AS Numeric(7, 2)), CAST(0.0000 AS Numeric(18, 4)), CAST(N'2020-03-11T09:50:08.933' AS DateTime), N'sa', CAST(88036 AS Numeric(18, 0))),
@@ -4978,7 +4996,11 @@ VALUES
 (N'0001', N'REFI', CAST(330500001 AS Numeric(9, 0)), CAST(20.9000 AS Numeric(18, 4)), CAST(100.00 AS Numeric(7, 2)), CAST(0.0000 AS Numeric(18, 4)), CAST(N'2020-03-09T13:39:36.340' AS DateTime), N'sa', CAST(102688 AS Numeric(18, 0))),
 (N'0001', N'REFI', CAST(330500002 AS Numeric(9, 0)), CAST(29.9000 AS Numeric(18, 4)), CAST(100.00 AS Numeric(7, 2)), CAST(0.0000 AS Numeric(18, 4)), CAST(N'2020-03-09T13:39:36.590' AS DateTime), N'sa', CAST(102754 AS Numeric(18, 0))),
 (N'0001', N'REFI', CAST(330500003 AS Numeric(9, 0)), CAST(39.9000 AS Numeric(18, 4)), CAST(100.00 AS Numeric(7, 2)), CAST(0.0000 AS Numeric(18, 4)), CAST(N'2020-03-09T13:39:37.027' AS DateTime), N'sa', CAST(102820 AS Numeric(18, 0))),
-(N'0001', N'REFI', CAST(330500004 AS Numeric(9, 0)), CAST(19.9000 AS Numeric(18, 4)), CAST(100.00 AS Numeric(7, 2)), CAST(0.0000 AS Numeric(18, 4)), CAST(N'2020-03-09T13:39:37.400' AS DateTime), N'sa', CAST(102886 AS Numeric(18, 0))),
+(N'0001', N'REFI', CAST(330500004 AS Numeric(9, 0)), CAST(19.9000 AS Numeric(18, 4)), CAST(100.00 AS Numeric(7, 2)), CAST(0.0000 AS Numeric(18, 4)), CAST(N'2020-03-09T13:39:37.400' AS DateTime), N'sa', CAST(102886 AS Numeric(18, 0)))
+GO
+INSERT INTO [dbo].[TP_PRECIOS]
+([Cajtpv], [Tipotarifa], [Articulo], [Precio], [Porcentaje_Combinado], [Precio_Combinado], [Fecha_Modificado], [Usuario], [Codigoid])
+VALUES
 (N'0001', N'REFI', CAST(330500005 AS Numeric(9, 0)), CAST(6.5000 AS Numeric(18, 4)), CAST(100.00 AS Numeric(7, 2)), CAST(0.0000 AS Numeric(18, 4)), CAST(N'2020-03-09T13:39:37.963' AS DateTime), N'sa', CAST(102952 AS Numeric(18, 0))),
 (N'0001', N'REFI', CAST(330500006 AS Numeric(9, 0)), CAST(18.5000 AS Numeric(18, 4)), CAST(100.00 AS Numeric(7, 2)), CAST(0.0000 AS Numeric(18, 4)), CAST(N'2020-03-09T13:39:38.137' AS DateTime), N'sa', CAST(103018 AS Numeric(18, 0))),
 (N'0001', N'REFI', CAST(330500007 AS Numeric(9, 0)), CAST(5.0000 AS Numeric(18, 4)), CAST(100.00 AS Numeric(7, 2)), CAST(0.0000 AS Numeric(18, 4)), CAST(N'2020-03-09T13:39:38.450' AS DateTime), N'sa', CAST(103084 AS Numeric(18, 0))),
@@ -5974,7 +5996,11 @@ VALUES
 (N'0001', N'TIN+', CAST(29900014 AS Numeric(9, 0)), CAST(2.0000 AS Numeric(18, 4)), CAST(100.00 AS Numeric(7, 2)), CAST(0.0000 AS Numeric(18, 4)), CAST(N'2020-03-14T13:43:56.080' AS DateTime), N'sa', CAST(133046 AS Numeric(18, 0))),
 (N'0001', N'TIN+', CAST(29900016 AS Numeric(9, 0)), CAST(4.0000 AS Numeric(18, 4)), CAST(100.00 AS Numeric(7, 2)), CAST(0.0000 AS Numeric(18, 4)), CAST(N'2020-08-07T16:27:48.920' AS DateTime), N'sa', CAST(132320 AS Numeric(18, 0))),
 (N'0001', N'TIN+', CAST(29900018 AS Numeric(9, 0)), CAST(2.0000 AS Numeric(18, 4)), CAST(100.00 AS Numeric(7, 2)), CAST(0.0000 AS Numeric(18, 4)), CAST(N'2020-03-14T13:43:55.057' AS DateTime), N'sa', CAST(132584 AS Numeric(18, 0))),
-(N'0001', N'TIN+', CAST(29900020 AS Numeric(9, 0)), CAST(2.5000 AS Numeric(18, 4)), CAST(100.00 AS Numeric(7, 2)), CAST(0.0000 AS Numeric(18, 4)), CAST(N'2020-03-14T12:02:16.133' AS DateTime), N'sa', CAST(132386 AS Numeric(18, 0))),
+(N'0001', N'TIN+', CAST(29900020 AS Numeric(9, 0)), CAST(2.5000 AS Numeric(18, 4)), CAST(100.00 AS Numeric(7, 2)), CAST(0.0000 AS Numeric(18, 4)), CAST(N'2020-03-14T12:02:16.133' AS DateTime), N'sa', CAST(132386 AS Numeric(18, 0)))
+GO
+INSERT INTO [dbo].[TP_PRECIOS]
+([Cajtpv], [Tipotarifa], [Articulo], [Precio], [Porcentaje_Combinado], [Precio_Combinado], [Fecha_Modificado], [Usuario], [Codigoid])
+VALUES
 (N'0001', N'TIN+', CAST(29900021 AS Numeric(9, 0)), CAST(3.0000 AS Numeric(18, 4)), CAST(100.00 AS Numeric(7, 2)), CAST(0.0000 AS Numeric(18, 4)), CAST(N'2020-03-14T13:43:55.117' AS DateTime), N'sa', CAST(132782 AS Numeric(18, 0))),
 (N'0001', N'TIN+', CAST(29900022 AS Numeric(9, 0)), CAST(2.0000 AS Numeric(18, 4)), CAST(100.00 AS Numeric(7, 2)), CAST(0.0000 AS Numeric(18, 4)), CAST(N'2020-08-21T11:32:28.407' AS DateTime), N'sa', CAST(141811 AS Numeric(18, 0))),
 (N'0001', N'TIN+', CAST(29900023 AS Numeric(9, 0)), CAST(2.0000 AS Numeric(18, 4)), CAST(100.00 AS Numeric(7, 2)), CAST(0.0000 AS Numeric(18, 4)), CAST(N'2020-08-21T11:31:35.520' AS DateTime), N'sa', CAST(132452 AS Numeric(18, 0))),
@@ -6970,7 +6996,11 @@ VALUES
 (N'0001', N'TINC', CAST(20200109 AS Numeric(9, 0)), CAST(16.0000 AS Numeric(18, 4)), CAST(100.00 AS Numeric(7, 2)), CAST(0.0000 AS Numeric(18, 4)), CAST(N'2022-10-17T12:10:08.870' AS DateTime), N'AS400', CAST(122819 AS Numeric(18, 0))),
 (N'0001', N'TINC', CAST(20200110 AS Numeric(9, 0)), CAST(0.0000 AS Numeric(18, 4)), CAST(100.00 AS Numeric(7, 2)), CAST(0.0000 AS Numeric(18, 4)), CAST(N'2022-06-15T19:17:45.173' AS DateTime), N'AS400', CAST(165640 AS Numeric(18, 0))),
 (N'0001', N'TINC', CAST(20200113 AS Numeric(9, 0)), CAST(17.5000 AS Numeric(18, 4)), CAST(100.00 AS Numeric(7, 2)), CAST(0.0000 AS Numeric(18, 4)), CAST(N'2022-10-17T12:10:08.857' AS DateTime), N'AS400', CAST(123083 AS Numeric(18, 0))),
-(N'0001', N'TINC', CAST(20200114 AS Numeric(9, 0)), CAST(24.0000 AS Numeric(18, 4)), CAST(100.00 AS Numeric(7, 2)), CAST(0.0000 AS Numeric(18, 4)), CAST(N'2020-03-12T10:13:05.450' AS DateTime), N'sa', CAST(126317 AS Numeric(18, 0))),
+(N'0001', N'TINC', CAST(20200114 AS Numeric(9, 0)), CAST(24.0000 AS Numeric(18, 4)), CAST(100.00 AS Numeric(7, 2)), CAST(0.0000 AS Numeric(18, 4)), CAST(N'2020-03-12T10:13:05.450' AS DateTime), N'sa', CAST(126317 AS Numeric(18, 0)))
+GO
+INSERT INTO [dbo].[TP_PRECIOS]
+([Cajtpv], [Tipotarifa], [Articulo], [Precio], [Porcentaje_Combinado], [Precio_Combinado], [Fecha_Modificado], [Usuario], [Codigoid])
+VALUES
 (N'0001', N'TINC', CAST(20200115 AS Numeric(9, 0)), CAST(8.0000 AS Numeric(18, 4)), CAST(100.00 AS Numeric(7, 2)), CAST(0.0000 AS Numeric(18, 4)), CAST(N'2020-03-13T13:00:34.380' AS DateTime), N'sa', CAST(131267 AS Numeric(18, 0))),
 (N'0001', N'TINC', CAST(20200121 AS Numeric(9, 0)), CAST(10.5000 AS Numeric(18, 4)), CAST(100.00 AS Numeric(7, 2)), CAST(0.0000 AS Numeric(18, 4)), CAST(N'2022-03-07T12:30:43.470' AS DateTime), N'AS400', CAST(154222 AS Numeric(18, 0))),
 (N'0001', N'TINC', CAST(20200122 AS Numeric(9, 0)), CAST(8.5000 AS Numeric(18, 4)), CAST(100.00 AS Numeric(7, 2)), CAST(0.0000 AS Numeric(18, 4)), CAST(N'2022-03-07T12:30:45.500' AS DateTime), N'AS400', CAST(154288 AS Numeric(18, 0))),
@@ -7966,7 +7996,11 @@ VALUES
 (N'0002', N'GENE', CAST(10400103 AS Numeric(9, 0)), CAST(32.4000 AS Numeric(18, 4)), CAST(100.00 AS Numeric(7, 2)), CAST(0.0000 AS Numeric(18, 4)), CAST(N'2022-07-06T12:53:45.057' AS DateTime), N'AS400', CAST(148025 AS Numeric(18, 0))),
 (N'0002', N'GENE', CAST(10400113 AS Numeric(9, 0)), CAST(21.9000 AS Numeric(18, 4)), CAST(100.00 AS Numeric(7, 2)), CAST(0.0000 AS Numeric(18, 4)), CAST(N'2022-07-06T12:53:44.963' AS DateTime), N'AS400', CAST(125268 AS Numeric(18, 0))),
 (N'0002', N'GENE', CAST(10400145 AS Numeric(9, 0)), CAST(4.5000 AS Numeric(18, 4)), CAST(100.00 AS Numeric(7, 2)), CAST(0.0000 AS Numeric(18, 4)), CAST(N'2020-03-11T10:15:44.397' AS DateTime), N'sa', CAST(90882 AS Numeric(18, 0))),
-(N'0002', N'GENE', CAST(10400146 AS Numeric(9, 0)), CAST(23.4000 AS Numeric(18, 4)), CAST(100.00 AS Numeric(7, 2)), CAST(0.0000 AS Numeric(18, 4)), CAST(N'2022-07-06T12:53:45.010' AS DateTime), N'AS400', CAST(144197 AS Numeric(18, 0))),
+(N'0002', N'GENE', CAST(10400146 AS Numeric(9, 0)), CAST(23.4000 AS Numeric(18, 4)), CAST(100.00 AS Numeric(7, 2)), CAST(0.0000 AS Numeric(18, 4)), CAST(N'2022-07-06T12:53:45.010' AS DateTime), N'AS400', CAST(144197 AS Numeric(18, 0)))
+GO
+INSERT INTO [dbo].[TP_PRECIOS]
+([Cajtpv], [Tipotarifa], [Articulo], [Precio], [Porcentaje_Combinado], [Precio_Combinado], [Fecha_Modificado], [Usuario], [Codigoid])
+VALUES
 (N'0002', N'GENE', CAST(10400147 AS Numeric(9, 0)), CAST(4.5000 AS Numeric(18, 4)), CAST(100.00 AS Numeric(7, 2)), CAST(0.0000 AS Numeric(18, 4)), CAST(N'2020-09-21T18:28:41.633' AS DateTime), N'sa', CAST(144263 AS Numeric(18, 0))),
 (N'0002', N'GENE', CAST(10400148 AS Numeric(9, 0)), CAST(21.3000 AS Numeric(18, 4)), CAST(100.00 AS Numeric(7, 2)), CAST(0.0000 AS Numeric(18, 4)), CAST(N'2022-07-06T12:53:45.027' AS DateTime), N'AS400', CAST(147893 AS Numeric(18, 0))),
 (N'0002', N'GENE', CAST(10500003 AS Numeric(9, 0)), CAST(20.9000 AS Numeric(18, 4)), CAST(100.00 AS Numeric(7, 2)), CAST(0.0000 AS Numeric(18, 4)), CAST(N'2022-07-06T12:53:45.667' AS DateTime), N'AS400', CAST(148091 AS Numeric(18, 0))),
@@ -8962,7 +8996,11 @@ VALUES
 (N'0002', N'GENE', CAST(330800007 AS Numeric(9, 0)), CAST(5.0000 AS Numeric(18, 4)), CAST(100.00 AS Numeric(7, 2)), CAST(0.0000 AS Numeric(18, 4)), CAST(N'2020-03-09T13:40:00.243' AS DateTime), N'sa', CAST(107184 AS Numeric(18, 0))),
 (N'0002', N'GENE', CAST(330800008 AS Numeric(9, 0)), CAST(8.5000 AS Numeric(18, 4)), CAST(100.00 AS Numeric(7, 2)), CAST(0.0000 AS Numeric(18, 4)), CAST(N'2020-03-09T13:40:00.760' AS DateTime), N'sa', CAST(107250 AS Numeric(18, 0))),
 (N'0002', N'GENE', CAST(330800009 AS Numeric(9, 0)), CAST(17.5000 AS Numeric(18, 4)), CAST(100.00 AS Numeric(7, 2)), CAST(0.0000 AS Numeric(18, 4)), CAST(N'2020-03-09T13:40:01.040' AS DateTime), N'sa', CAST(107316 AS Numeric(18, 0))),
-(N'0002', N'GENE', CAST(330800010 AS Numeric(9, 0)), CAST(17.5000 AS Numeric(18, 4)), CAST(100.00 AS Numeric(7, 2)), CAST(0.0000 AS Numeric(18, 4)), CAST(N'2020-03-09T13:40:01.510' AS DateTime), N'sa', CAST(107382 AS Numeric(18, 0))),
+(N'0002', N'GENE', CAST(330800010 AS Numeric(9, 0)), CAST(17.5000 AS Numeric(18, 4)), CAST(100.00 AS Numeric(7, 2)), CAST(0.0000 AS Numeric(18, 4)), CAST(N'2020-03-09T13:40:01.510' AS DateTime), N'sa', CAST(107382 AS Numeric(18, 0)))
+GO
+INSERT INTO [dbo].[TP_PRECIOS]
+([Cajtpv], [Tipotarifa], [Articulo], [Precio], [Porcentaje_Combinado], [Precio_Combinado], [Fecha_Modificado], [Usuario], [Codigoid])
+VALUES
 (N'0002', N'GENE', CAST(330800011 AS Numeric(9, 0)), CAST(11.9000 AS Numeric(18, 4)), CAST(100.00 AS Numeric(7, 2)), CAST(0.0000 AS Numeric(18, 4)), CAST(N'2020-03-09T13:40:01.680' AS DateTime), N'sa', CAST(107448 AS Numeric(18, 0))),
 (N'0002', N'GENE', CAST(330800012 AS Numeric(9, 0)), CAST(20.0000 AS Numeric(18, 4)), CAST(100.00 AS Numeric(7, 2)), CAST(0.0000 AS Numeric(18, 4)), CAST(N'2020-03-09T13:40:02.150' AS DateTime), N'sa', CAST(107514 AS Numeric(18, 0))),
 (N'0002', N'GENE', CAST(330800013 AS Numeric(9, 0)), CAST(11.9000 AS Numeric(18, 4)), CAST(100.00 AS Numeric(7, 2)), CAST(0.0000 AS Numeric(18, 4)), CAST(N'2020-03-09T13:40:03.197' AS DateTime), N'sa', CAST(107580 AS Numeric(18, 0))),
@@ -9958,7 +9996,11 @@ VALUES
 (N'0002', N'HAHO', CAST(40100040 AS Numeric(9, 0)), CAST(2.5000 AS Numeric(18, 4)), CAST(100.00 AS Numeric(7, 2)), CAST(0.0000 AS Numeric(18, 4)), CAST(N'2022-07-06T11:16:12.023' AS DateTime), N'AS400', CAST(93783 AS Numeric(18, 0))),
 (N'0002', N'HAHO', CAST(40100044 AS Numeric(9, 0)), CAST(2.5000 AS Numeric(18, 4)), CAST(100.00 AS Numeric(7, 2)), CAST(0.0000 AS Numeric(18, 4)), CAST(N'2020-08-17T14:24:02.943' AS DateTime), N'sa', CAST(139376 AS Numeric(18, 0))),
 (N'0002', N'HAHO', CAST(40100045 AS Numeric(9, 0)), CAST(1.4000 AS Numeric(18, 4)), CAST(100.00 AS Numeric(7, 2)), CAST(0.0000 AS Numeric(18, 4)), CAST(N'2020-03-09T11:36:55.270' AS DateTime), N'sa', CAST(93585 AS Numeric(18, 0))),
-(N'0002', N'HAHO', CAST(40100046 AS Numeric(9, 0)), CAST(2.5000 AS Numeric(18, 4)), CAST(100.00 AS Numeric(7, 2)), CAST(0.0000 AS Numeric(18, 4)), CAST(N'2020-08-17T12:28:40.453' AS DateTime), N'sa', CAST(138914 AS Numeric(18, 0))),
+(N'0002', N'HAHO', CAST(40100046 AS Numeric(9, 0)), CAST(2.5000 AS Numeric(18, 4)), CAST(100.00 AS Numeric(7, 2)), CAST(0.0000 AS Numeric(18, 4)), CAST(N'2020-08-17T12:28:40.453' AS DateTime), N'sa', CAST(138914 AS Numeric(18, 0)))
+GO
+INSERT INTO [dbo].[TP_PRECIOS]
+([Cajtpv], [Tipotarifa], [Articulo], [Precio], [Porcentaje_Combinado], [Precio_Combinado], [Fecha_Modificado], [Usuario], [Codigoid])
+VALUES
 (N'0002', N'HAHO', CAST(40100047 AS Numeric(9, 0)), CAST(2.4000 AS Numeric(18, 4)), CAST(100.00 AS Numeric(7, 2)), CAST(0.0000 AS Numeric(18, 4)), CAST(N'2022-07-06T11:16:10.120' AS DateTime), N'AS400', CAST(93453 AS Numeric(18, 0))),
 (N'0002', N'HAHO', CAST(40100051 AS Numeric(9, 0)), CAST(2.4000 AS Numeric(18, 4)), CAST(100.00 AS Numeric(7, 2)), CAST(0.0000 AS Numeric(18, 4)), CAST(N'2022-07-06T11:16:13.993' AS DateTime), N'AS400', CAST(167228 AS Numeric(18, 0))),
 (N'0002', N'HAHO', CAST(40100059 AS Numeric(9, 0)), CAST(1.8000 AS Numeric(18, 4)), CAST(100.00 AS Numeric(7, 2)), CAST(0.0000 AS Numeric(18, 4)), CAST(N'2022-07-06T11:16:19.883' AS DateTime), N'AS400', CAST(93321 AS Numeric(18, 0))),

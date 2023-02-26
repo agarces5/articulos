@@ -11,4 +11,6 @@ services:
       SA_PASSWORD: Sqlserver-2017
       MSSQL_PID: Express
     volumes:
-      - ~/dev/articulos_senator/sqlserver-data:/var/opt/mssql
+      - ./sql:/sql
+    #   - ~/dev/articulos_senator/sqlserver-data:/var/opt/mssql
+
