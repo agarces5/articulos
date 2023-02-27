@@ -4,6 +4,8 @@
 
 Necesitaremos tener instalado ***docker*** y ***docker-compose*** ya que montamos una base de datos Microsoft SQL Server con ello.
 
+### Opcional
+
 Tambien usamos cargo-make para correr los scripts del *Makefile.toml*.
 
 ## Inicializacion
