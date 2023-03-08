@@ -1,0 +1,28 @@
+@startuml StateDiagram
+    [*] --> InitState
+    InitState --> ArticleNotFound
+    ArticleNotFound --> ArticleInRepository
+    InitState --> ArticleFound
+    ArticleFound --> ArticleDeleted
+    ArticleFound --> ArticleNameUpdated
+    ArticleFound --> ArticleFamilyUpdated
+    ArticleFound --> ArticlePriceUpdated
+    ArticleFound --> ArticleCashboxDeleted
+
+    state c <<choice>>
+
+    ArticleInRepository --> InitState
+    ArticleInRepository --> [*]
+
+    ArticleDeleted --> c
+    ArticleNameUpdated --> c
+    ArticleFamilyUpdated --> c
+    ArticlePriceUpdated --> c
+    ArticleCashboxDeleted --> c
+
+    c --> InitState
+    c --> [*]
+
+
+
+@enduml

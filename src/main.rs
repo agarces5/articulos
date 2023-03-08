@@ -2,7 +2,6 @@ mod application;
 mod domain;
 mod infrastructure;
 
-use anyhow::Ok;
 use infrastructure::mssql_repository::get_all;
 
 #[tokio::main]

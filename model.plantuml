@@ -1,0 +1,57 @@
+@startuml ModelsDiagram
+
+class Article {
+    id: int
+    name: String
+    family_id: int
+}
+class Family {
+    id: int
+    name: String
+}
+class Price {
+    price: int
+    art_id: int
+    cashbox_id: int
+}
+class Cashbox {
+    cashbox: int
+    art_id: int
+}
+interface ArticleRepository {
+    new()
+    calc_id()
+    find_by_id()
+    find_by_subname()
+    update_name()
+    update_family()
+    delete()
+}
+interface FamilyRepository {
+    find_by_id()
+    find_by_name()
+}
+
+interface PriceRepository {
+    find_by_article()
+    ' Try to find generalizations to update/delete many art and many cashboxes
+    delete_by_article() 
+    update_by_article()
+}
+interface CashboxRepository {
+    find_by_article()
+    find_by_cashbox()
+    delete_by_cashbox()
+}
+
+Article "many" --> "1" Family
+Price "many" --> "1" Article
+Price --> Cashbox
+Cashbox "many" --> "1" Article
+
+Article ..|> ArticleRepository
+Price ..|> PriceRepository
+Family ..|> FamilyRepository
+Cashbox ..|> CashboxRepository
+
+@enduml

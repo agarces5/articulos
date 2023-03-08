@@ -1,18 +1,34 @@
-use std::fmt::Display;
-
 #[derive(Debug)]
 pub struct Articulo {
-    pub articulo: String,
-    pub nombre: String,
-    pub familia: String,
+    id: String,
+    nombre: String,
+    familia: String,
 }
 
-impl Display for Articulo {
-    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
-        write!(
-            f,
+impl Articulo {
+    pub fn new(id: String, nombre: String, familia: String) -> Self {
+        Self {
+            id,
+            nombre,
+            familia,
+        }
+    }
+    pub fn id(&self) -> &str {
+        &self.id
+    }
+    pub fn nombre(&self) -> &str {
+        &self.nombre
+    }
+    pub fn familia(&self) -> &str {
+        &self.familia
+    }
+}
+
+impl ToString for Articulo {
+    fn to_string(&self) -> String {
+        format!(
             "Articulo: {},\t Nombre: {},\t Familia: {})",
-            self.articulo, self.nombre, self.familia
+            self.id, self.nombre, self.familia
         )
     }
 }
