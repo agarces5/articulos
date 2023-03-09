@@ -1,11 +1,12 @@
-mod application;
-mod domain;
-mod infrastructure;
+mod article;
 
-use infrastructure::mssql_repository::get_all;
+use article::{
+    domain::article_repository::ArticleRepository, infrastructure::mssql_article_repository::*,
+};
 
 #[tokio::main]
 async fn main() -> anyhow::Result<()> {
-    let _res = get_all().await;
+    let family_id = "0101".to_string();
+    let _res = MssqlArticleRepository::calc_id(family_id).await;
     Ok(())
 }
