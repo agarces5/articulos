@@ -5,6 +5,7 @@ use tokio_util::compat::{Compat, TokioAsyncWriteCompatExt};
 
 use crate::common::domain::db_connection::DBConnection;
 
+#[derive(Debug, Clone, Default)]
 pub struct TiberiusClient;
 
 impl TiberiusClient {

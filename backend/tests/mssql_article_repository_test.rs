@@ -10,7 +10,8 @@ use articulos::article::application::remove_article::RemoveArticleUseCase;
 use articulos::article::application::update_article::UpdateArticleUseCase;
 use articulos::article::domain::{article::Article, article_repository::ArticleRepository};
 use articulos::article::infrastructure::db::tiberius::mssql_article_repository::MssqlArticleRepository;
-use articulos::common::infrastructure::db::tiberius::create_config::set_tcp_client;
+use articulos::common::domain::db_connection::DBConnection;
+use articulos::common::infrastructure::db::tiberius::create_config::*;
 use tokio::sync::Mutex;
 
 const DATABASE: &str = "WTPV_CALEIA_TEST";
@@ -18,7 +19,10 @@ const USER: &str = "SA";
 const PASSWORD: &str = "Sqlserver-2017";
 
 async fn create_repo() -> anyhow::Result<MssqlArticleRepository> {
-    let client = set_tcp_client(USER, PASSWORD, DATABASE).await.unwrap();
+    let client = TiberiusClient::new()
+        .set_tcp_client(USER, PASSWORD, DATABASE)
+        .await
+        .unwrap();
     let repo = MssqlArticleRepository::new(Arc::new(Mutex::new(client)));
 
     Ok(repo)
@@ -27,7 +31,10 @@ async fn create_repo() -> anyhow::Result<MssqlArticleRepository> {
 #[tokio::test]
 async fn database_connection() {
     // Creamos una conexión a una base de datos de prueba
-    let mut client = set_tcp_client(USER, PASSWORD, DATABASE).await.unwrap();
+    let mut client = TiberiusClient::new()
+        .set_tcp_client(USER, PASSWORD, DATABASE)
+        .await
+        .unwrap();
     let result = client
         .query(
             "SELECT DISTINCT 1
