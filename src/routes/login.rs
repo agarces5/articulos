@@ -7,13 +7,10 @@ use crate::stores::login_info::LoginInfo;
 #[function_component(Login)]
 pub fn login_page() -> Html {
     let (store, login_dispatch) = use_store::<LoginInfo>();
-    let username = format!(
-        "Usuario: {}",
-        store.username.as_deref().clone().unwrap_or_default()
-    );
+    let username = format!("Usuario: {}", store.username.as_deref().unwrap_or_default());
     let password = format!(
         "Password: {}",
-        store.password.as_deref().clone().unwrap_or_default()
+        store.password.as_deref().unwrap_or_default()
     );
     let is_logged = format!("Logged: {}", store.is_logged);
     let onchange_username = {
@@ -35,7 +32,7 @@ pub fn login_page() -> Html {
         })
     };
     let onchange_password = {
-        let login_dispatch = login_dispatch.clone();
+        let login_dispatch = login_dispatch;
         Callback::from(move |e: Event| {
             let password = e.target_unchecked_into::<HtmlInputElement>().value();
             let password = if password.is_empty() {

@@ -1,4 +1,3 @@
-use serde_json::json;
 use tauri::http::{Request, Response};
 
 use crate::common::application::{
@@ -30,6 +29,7 @@ impl LoginController {
 #[cfg(test)]
 mod tests {
 
+    use serde_json::json;
     use tauri::http::status::StatusCode;
 
     use crate::common::infrastructure::db::tiberius::create_config::TiberiusClient;

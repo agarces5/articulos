@@ -30,7 +30,7 @@ pub fn header() -> Html {
     }
 }
 
-fn logged_out_view() -> Html {
+fn _logged_out_view() -> Html {
     html! {
         <ul class="nav navbar-nav pull-xs-right">
             <li class="nav-item">
@@ -52,7 +52,7 @@ fn logged_out_view() -> Html {
     }
 }
 
-fn logged_in_view() -> Html {
+fn _logged_in_view() -> Html {
     html! {
         <ul class="nav navbar-nav pull-xs-right">
             <li class="nav-item">
