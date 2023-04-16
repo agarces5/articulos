@@ -1,4 +1,7 @@
-mod app;
+pub mod app;
+pub mod components;
+pub mod routes;
+pub mod stores;
 
 use app::App;
 

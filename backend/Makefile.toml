@@ -1,0 +1,60 @@
+[tasks.format]
+install_crate = "rustfmt"
+command = "cargo"
+args = ["fmt", "--", "--emit=files"]
+
+[tasks.build]
+command = "cargo"
+args = ["build"]
+dependencies = ["format"]
+
+[tasks.clippy]
+command = "cargo"
+args = ["clippy"]
+
+[tasks.test]
+command = "cargo"
+args = ["test", "--", "--test-threads=1"]
+dependencies = ["clippy"]
+
+[tasks.db-start]
+script_runner = "@shell"
+script = '''
+docker-compose up -d
+'''
+
+[tasks.db-stop]
+script_runner = "@shell"
+script = '''
+docker-compose down
+'''
+
+[tasks.db-sh]
+script_runner = "@shell"
+script = '''
+docker exec -it sqlserver2017 sh
+'''
+
+[tasks.db-connect]
+script_runner = "@shell"
+script = '''
+docker exec -it sqlserver2017 /opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P Sqlserver-2017
+'''
+
+[tasks.db-create]
+script_runner = "@shell"
+script = '''
+docker exec -it sqlserver2017 sh /sql/init.sh
+'''
+
+[tasks.db-create-test]
+script_runner = "@shell"
+script = '''
+docker exec -it sqlserver2017 sh /sql_test/init.sh
+'''
+
+[tasks.db-reset]
+dependencies = ["db-stop", "db-start", "db-create"]
+
+[tasks.db-reset-test]
+dependencies = ["db-stop", "db-start", "db-create-test"]
