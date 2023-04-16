@@ -1,5 +1,5 @@
 [package]
-name = "articulos"
+name = "backend"
 version = "0.0.0"
 description = "Articulos backend"
 authors = ["Antonio Garces <garces080995@gmail.com>"]

@@ -1,5 +1,6 @@
 pub mod app;
 pub mod components;
+pub mod prueba;
 pub mod routes;
 pub mod stores;
 

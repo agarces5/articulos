@@ -1,4 +1,4 @@
-use articulos::article::{
+use backend::article::{
     application::{
         dto::{article_id_dto::ArticleIdInputDTO, update_article_dto::UpdateArticleInputDTO},
         remove_article::RemoveArticleUseCase,

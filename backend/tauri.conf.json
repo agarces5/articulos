@@ -1,9 +1,9 @@
 {
   "build": {
-    "beforeDevCommand": "trunk serve",
-    "beforeBuildCommand": "trunk build",
+    "beforeDevCommand": "cd frontend && trunk serve",
+    "beforeBuildCommand": "cd frontend && trunk build",
     "devPath": "http://localhost:1420",
-    "distDir": "../dist",
+    "distDir": "../frontend/dist",
     "withGlobalTauri": true
   },
   "package": {

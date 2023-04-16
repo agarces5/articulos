@@ -1,17 +1,17 @@
 use std::sync::Arc;
 
-use articulos::article::application::create_article::CreateArticleUseCase;
-use articulos::article::application::dto::article_id_dto::ArticleIdInputDTO;
-use articulos::article::application::dto::article_name_dto::ArticleNameInputDTO;
-use articulos::article::application::dto::create_article_dto::CreateArticleInputDTO;
-use articulos::article::application::dto::update_article_dto::UpdateArticleInputDTO;
-use articulos::article::application::find_article::FindArticleUseCase;
-use articulos::article::application::remove_article::RemoveArticleUseCase;
-use articulos::article::application::update_article::UpdateArticleUseCase;
-use articulos::article::domain::{article::Article, article_repository::ArticleRepository};
-use articulos::article::infrastructure::db::tiberius::mssql_article_repository::MssqlArticleRepository;
-use articulos::common::domain::db_connection::DBConnection;
-use articulos::common::infrastructure::db::tiberius::create_config::*;
+use backend::article::application::create_article::CreateArticleUseCase;
+use backend::article::application::dto::article_id_dto::ArticleIdInputDTO;
+use backend::article::application::dto::article_name_dto::ArticleNameInputDTO;
+use backend::article::application::dto::create_article_dto::CreateArticleInputDTO;
+use backend::article::application::dto::update_article_dto::UpdateArticleInputDTO;
+use backend::article::application::find_article::FindArticleUseCase;
+use backend::article::application::remove_article::RemoveArticleUseCase;
+use backend::article::application::update_article::UpdateArticleUseCase;
+use backend::article::domain::{article::Article, article_repository::ArticleRepository};
+use backend::article::infrastructure::db::tiberius::mssql_article_repository::MssqlArticleRepository;
+use backend::common::domain::db_connection::DBConnection;
+use backend::common::infrastructure::db::tiberius::create_config::*;
 use tokio::sync::Mutex;
 
 const DATABASE: &str = "WTPV_CALEIA_TEST";
