@@ -15,9 +15,9 @@ fn create_config(user: impl ToString, pass: impl ToString, database: impl ToStri
 }
 
 pub async fn set_tcp_client(
-    database: impl ToString,
     user: impl ToString,
     pass: impl ToString,
+    database: impl ToString,
 ) -> anyhow::Result<Client<Compat<TcpStream>>> {
     let config = create_config(user, pass, database);
 

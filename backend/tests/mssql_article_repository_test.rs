@@ -9,8 +9,8 @@ use articulos::article::application::find_article::FindArticleUseCase;
 use articulos::article::application::remove_article::RemoveArticleUseCase;
 use articulos::article::application::update_article::UpdateArticleUseCase;
 use articulos::article::domain::{article::Article, article_repository::ArticleRepository};
-use articulos::article::infrastructure::db::tiberius::create_config::set_tcp_client;
 use articulos::article::infrastructure::db::tiberius::mssql_article_repository::MssqlArticleRepository;
+use articulos::common::infrastructure::db::tiberius::create_config::set_tcp_client;
 use tokio::sync::Mutex;
 
 const DATABASE: &str = "WTPV_CALEIA_TEST";
@@ -27,7 +27,7 @@ async fn create_repo() -> anyhow::Result<MssqlArticleRepository> {
 #[tokio::test]
 async fn database_connection() {
     // Creamos una conexión a una base de datos de prueba
-    let mut client = set_tcp_client(DATABASE, USER, PASSWORD).await.unwrap();
+    let mut client = set_tcp_client(USER, PASSWORD, DATABASE).await.unwrap();
     let result = client
         .query(
             "SELECT DISTINCT 1
