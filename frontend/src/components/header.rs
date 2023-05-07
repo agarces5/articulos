@@ -17,14 +17,6 @@ pub fn header() -> Html {
                 <Link<AppRoute> to={AppRoute::DatabaseChooser} classes="navbar-brand">
                     { "DatabaseChooser" }
                 </Link<AppRoute>>
-
-                // {
-                //     if user_ctx.is_authenticated() {
-                //         logged_in_view((*user_ctx).clone())
-                //     } else {
-                //         logged_out_view()
-                //     }
-                // }
             </div>
         </nav>
     }
