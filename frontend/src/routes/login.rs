@@ -1,58 +1,50 @@
-use web_sys::HtmlInputElement;
+use reqwasm::http::{self, Response};
+use wasm_bindgen_futures::spawn_local;
 use yew::prelude::*;
+use yew_router::prelude::use_navigator;
 use yewdux::prelude::use_store;
 
-use crate::stores::login_info::LoginInfo;
+use crate::{components::login_input::LoginInput, routes::AppRoute, stores::login_info::LoginInfo};
+
+async fn login_req(body: &LoginInfo) -> anyhow::Result<Response> {
+    let response = http::Request::post("http://localhost:8080/api/login")
+        .header("Content-Type", "application/json")
+        .body(serde_json::to_string(body)?)
+        .send()
+        .await?;
+    match response.status() {
+        200 => Ok(response),
+        _ => Err(anyhow::Error::msg("Bad request!")),
+    }
+}
 
 #[function_component(Login)]
 pub fn login_page() -> Html {
-    let (store, login_dispatch) = use_store::<LoginInfo>();
-    let username = format!("Usuario: {}", store.username.as_deref().unwrap_or_default());
-    let password = format!(
-        "Password: {}",
-        store.password.as_deref().unwrap_or_default()
-    );
-    let is_logged = format!("Logged: {}", store.is_logged);
-    let onchange_username = {
-        let login_dispatch = login_dispatch.clone();
-        Callback::from(move |e: Event| {
-            let username = e.target_unchecked_into::<HtmlInputElement>().value();
-            let username = if username.is_empty() {
-                None
-            } else {
-                Some(username)
-            };
-            login_dispatch.reduce(|login_state| {
-                LoginInfo {
-                    username,
-                    ..login_state.as_ref().clone()
+    let (_, login_dispatch) = use_store::<LoginInfo>();
+    let onsubmit = {
+        let navigator = use_navigator().unwrap();
+        Callback::from(move |e: SubmitEvent| {
+            e.prevent_default();
+            let navigator = navigator.clone();
+            let login_dispatch = login_dispatch.clone();
+            let login_data = login_dispatch.get();
+            spawn_local(async move {
+                let response = login_req(&login_data).await;
+                match response {
+                    Ok(_) => {
+                        login_dispatch.reduce(|login_state| {
+                            LoginInfo {
+                                is_logged: true,
+                                ..login_state.as_ref().clone()
+                            }
+                            .into()
+                        });
+                        navigator.push(&AppRoute::DatabaseChooser)
+                    }
+                    Err(_) => gloo_dialogs::alert("Usuario invalido!"),
                 }
-                .into()
             });
         })
-    };
-    let onchange_password = {
-        let login_dispatch = login_dispatch;
-        Callback::from(move |e: Event| {
-            let password = e.target_unchecked_into::<HtmlInputElement>().value();
-            let password = if password.is_empty() {
-                None
-            } else {
-                Some(password)
-            };
-            login_dispatch.reduce(|login_state| {
-                LoginInfo {
-                    password,
-                    ..login_state.as_ref().clone()
-                }
-                .into()
-            })
-        })
-    };
-    let onsubmit = {
-        |e: SubmitEvent| {
-            e.prevent_default();
-        }
     };
     html! {
         <>
@@ -60,22 +52,16 @@ pub fn login_page() -> Html {
                 <h1 class="text-xs-center">{ "Sign In" }</h1>
                 <form {onsubmit}>
                     <fieldset class="d-grid gap-3" >
-                        <fieldset class="form-group">
-                            <input
-                                class="form-control form-control-lg"
-                                type="text"
-                                placeholder="Usuario"
-                                onchange={onchange_username}
-                                />
-                        </fieldset>
-                        <fieldset class="form-group">
-                            <input
-                                class="form-control form-control-lg"
-                                type="password"
-                                placeholder="Password"
-                                onchange={onchange_password}
-                                />
-                        </fieldset>
+                        <LoginInput
+                            _type={String::from("text")}
+                            placeholder={String::from("Usuario")}
+                            _key={String::from("username")}
+                        />
+                        <LoginInput
+                        _type={String::from("password")}
+                        placeholder={String::from("Password")}
+                        _key={String::from("password")}
+                        />
                         <button
                             class="btn btn-lg btn-primary pull-xs-right"
                             type="submit"
@@ -84,11 +70,6 @@ pub fn login_page() -> Html {
                         </button>
                     </fieldset>
                 </form>
-            </div>
-            <div class="container p-4">
-                <p>{username}</p>
-                <p>{password}</p>
-                <p>{is_logged}</p>
             </div>
         </>
     }
