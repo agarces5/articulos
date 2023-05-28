@@ -4,9 +4,6 @@
 - Revisar test para casos de uso.
 - Refactoring casos de uso.
 
-### WARNINGS
-- Loops en los test para guardar los articulos que se van a testear. Posibles loops infinitos!!
-
 ### ESQUEMA CONCEPTUAL
 - Cargo.lock y Cargo.toml: archivos de configuración de Cargo, el administrador de paquetes y compilador de Rust.
 - README.md: archivo de documentación del proyecto.
